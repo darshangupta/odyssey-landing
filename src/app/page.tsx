@@ -22,7 +22,7 @@ export default function Home() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (isValidEmail) {
-      // TODO: Implement AWS email functionality
+      // TODO: Implement email functionality
       console.log('Email submitted:', email)
       setEmail('')
       setShowSuccessMessage(true)
@@ -30,57 +30,108 @@ export default function Home() {
   }
 
   return (
-    <main className="flex-1 flex flex-col p-10">
-      <div className="flex flex-1 relative">
-        <div className="flex-1 flex flex-col z-10 pt-10 relative">
-          <h1 className="text-8xl font-medium leading-tight mb-6 max-w-4xl">
-            Transport Any<br />
-            Biologic, Anywhere.
-          </h1>
-          <h2 className="text-6xl font-normal text-gray-600 mb-20 max-w-4xl leading-tight">
-            Seamless healthcare logistics.
-          </h2>
+    <div className="min-h-screen flex flex-col bg-white">
+      {/* Header */}
+      <header className="px-12 pt-12">
+        <div className="max-w-[1400px] mx-auto">
+          <div className="flex items-center">
+            <Image
+              src="/images/Group 2147222271.png"
+              alt="Odyssey Logo"
+              width={128}
+              height={128}
+              className="w-32 h-32 object-contain"
+            />
+          </div>
+        </div>
+      </header>
 
-          <div className="w-[800px] absolute bottom-[300px]">
-            <div className="text-base font-medium mb-12 tracking-wider">
-              CONTACT OUR TEAM
-            </div>
-            <form onSubmit={handleSubmit} className="w-full relative">
-              <div className="relative flex flex-col border-b border-black pb-0 w-full">
+      {/* Main Content */}
+      <main className="flex-1 flex items-center overflow-hidden">
+        <div className="max-w-[1400px] mx-auto w-full flex px-12">
+          {/* Left Content */}
+          <div className="w-1/2 pr-12 pt-12">
+            <h1 className="text-6xl font-medium mb-4 leading-tight">
+              Transport Any<br />
+              Biologic, Anywhere.
+            </h1>
+            <p className="text-2xl text-gray-400 mb-16">
+              Seamless healthcare logistics.
+            </p>
+            
+            {/* Contact Form */}
+            <div>
+              <h3 className="text-sm font-mono uppercase mb-4 tracking-wider">CONTACT OUR TEAM</h3>
+              <form onSubmit={handleSubmit} className="relative">
                 <input
                   type="email"
                   value={email}
                   onChange={handleEmailChange}
                   placeholder="Email"
-                  className="w-full py-3 pr-16 pl-0 border-none text-2xl outline-none bg-transparent"
+                  className="w-full px-0 py-3 border-b border-gray-300 focus:border-black outline-none transition-colors placeholder-gray-400 text-lg"
                 />
                 <button
                   type="submit"
                   disabled={!isValidEmail}
-                  className={`absolute right-0 bottom-2 bg-[#f5f5f5] text-2xl w-10 h-10 flex items-center justify-center
-                    ${isValidEmail ? 'cursor-pointer text-black' : 'cursor-not-allowed text-gray-400'}`}
+                  className="absolute right-0 top-1/2 -translate-y-1/2"
                 >
-                  ›
+                  <svg 
+                    width="24" 
+                    height="24" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    className={`transition-opacity ${isValidEmail ? 'opacity-100' : 'opacity-50'}`}
+                  >
+                    <path 
+                      d="M12 4L10.59 5.41L16.17 11H4V13H16.17L10.59 18.59L12 20L20 12L12 4Z" 
+                      fill="currentColor"
+                    />
+                  </svg>
                 </button>
-              </div>
+              </form>
               {showSuccessMessage && (
-                <div className="absolute w-full text-center text-gray-600 mt-4">
-                  We will be in touch shortly
-                </div>
+                <p className="mt-2 text-green-600">Thank you for your interest!</p>
               )}
-            </form>
+            </div>
+          </div>
+
+          {/* Right Content - Globe */}
+          <div className="w-1/2 relative">
+            <div className="absolute right-0 translate-x-[33%] translate-y-[-60%] w-[160%] h-[160%]">
+              <Image
+                src="/images/globe.png"
+                alt="Global Coverage"
+                width={2000}
+                height={2000}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
           </div>
         </div>
+      </main>
 
-        <div className="flex-1 relative">
-          <Image
-            src="/images/globe.svg"
-            alt=""
-            fill
-            className="object-cover"
-          />
+      {/* Footer */}
+      <footer className="bg-[#F7F7F7]">
+        <div className="max-w-[1400px] mx-auto px-12 py-8">
+          <div className="flex justify-between items-center -mx-12">
+            <div className="px-12">
+              <span className="text-sm text-[#666666]">© 2025 Ship Odyssey, Inc.</span>
+            </div>
+            <div className="px-6">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <Image
+                  src="/images/linkedin_icon.png"
+                  alt="LinkedIn"
+                  width={24}
+                  height={24}
+                  className="opacity-50 hover:opacity-100 transition-opacity"
+                />
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-    </main>
+      </footer>
+    </div>
   )
 } 

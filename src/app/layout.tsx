@@ -1,6 +1,4 @@
 import React from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
 import './globals.css'
 
 export const metadata = {
@@ -15,10 +13,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="relative min-h-screen">
-        <Header />
+      <body className="w-screen min-h-screen m-0 p-0">
         {children}
-        <Footer />
       </body>
     </html>
   )

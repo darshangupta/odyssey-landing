@@ -32,3 +32,9 @@ git commit -m "Fix directory structure"
 git push origin main 
 
 ls landing-page/public/ 
+
+rm -rf node_modules package-lock.json .next
+npm install
+npm run dev 
+
+npx tailwindcss init -p 
