@@ -1,8 +1,11 @@
 import React from 'react'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import './globals.css'
 
 export const metadata = {
   title: 'Ship Odyssey',
-  description: 'Ship Odyssey - Coming Soon',
+  description: 'Transport Any Biologic, Anywhere',
 }
 
 export default function RootLayout({
@@ -12,15 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <div className="flex min-h-screen flex-col items-center justify-center p-24">
-          <h1 className="text-4xl font-bold">
-            Ship Odyssey
-          </h1>
-          <p className="mt-4 text-xl">
-            Coming soon...
-          </p>
-        </div>
+      <body className="relative min-h-screen">
+        <Header />
+        {children}
+        <Footer />
       </body>
     </html>
   )
