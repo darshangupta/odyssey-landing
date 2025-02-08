@@ -1,0 +1,34 @@
+mkdir -p public/fonts public/images public/videos 
+mkdir public
+ls public 
+rm -rf .git
+git init 
+
+# First remove node_modules completely
+git rm -r --cached node_modules
+
+# Reinstall dependencies
+npm install
+
+# Initialize git and add files with .gitignore respected
+git add .
+git commit -m "Initial commit" 
+
+git remote add origin https://github.com/darshangupta/odyssey-landing.git
+git branch -M main
+git push -u origin main --force 
+
+mv landing-page/public/* public/
+mv landing-page/public/*.svg public/
+
+git status --porcelain 
+
+git count-objects -v 
+
+ls -la 
+
+git add .
+git commit -m "Fix directory structure"
+git push origin main 
+
+ls landing-page/public/ 
