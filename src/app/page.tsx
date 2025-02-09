@@ -23,24 +23,24 @@ export default function Home() {
 
         <main className="flex-grow flex items-center relative py-[clamp(2rem,8vh,4rem)]">
           <div className="w-full max-w-[85vw] lg:max-w-[80vw] xl:max-w-[75vw] mx-auto">
-            <div className="relative z-10">
+            <div className="relative z-10 -mt-[clamp(2rem,5vh,4rem)]">
               {/* Main Heading */}
-              <h1 className="font-['Aeonik_Pro'] text-[clamp(2.25rem,4.5vw,4.5rem)] font-medium mb-4 leading-[1.1] tracking-tight">
+              <h1 className="font-['Aeonik_Pro'] text-[clamp(2.5rem,5vw,5rem)] font-medium mb-3 leading-[1.1] tracking-tight">
                 Transport Any<br />
                 Biologic, Anywhere.
               </h1>
 
               {/* Subheading */}
-              <p className="font-['Aeonik_Pro'] text-[clamp(1.25rem,2.5vw,2.75rem)] text-gray-400 mb-[clamp(2.5rem,6vh,4rem)]">
+              <p className="font-['Aeonik_Pro'] text-[clamp(1.25rem,2.5vw,2.75rem)] text-gray-400 mb-[clamp(5rem,12vh,8rem)]">
                 Seamless healthcare logistics.
               </p>
               
               {/* Contact Form Section */}
-              <div className="mt-[clamp(2rem,4vh,3rem)]">
+              <div className="mt-0">
                 <h3 className="font-['ABC_Diatype_Semi_Mono'] text-[13px] sm:text-sm uppercase mb-4 tracking-wider">
                   CONTACT OUR TEAM
                 </h3>
-                <form className="relative w-full max-w-[clamp(280px,65vw,700px)]">
+                <form className="relative w-full max-w-[clamp(280px,60vw,650px)]">
                   <input
                     type="email"
                     placeholder="Email"
