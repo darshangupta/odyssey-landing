@@ -22,7 +22,48 @@ export default function Home() {
       </header>
 
       <main className="flex-1">
-        {/* Main content will go here later */}
+        <div className="container mx-auto px-1 flex justify-between items-center h-full">
+          <div className="ml-[-60px] flex flex-col mt-[120px]">
+            {/* Main Heading */}
+            <h1 className="font-['Aeonik_Pro'] text-[72px] font-medium mb-4 leading-tight">
+              Transport Any<br />
+              Biologic, Anywhere.
+            </h1>
+
+            {/* Subheading */}
+            <p className="font-['Aeonik_Pro'] text-[44px] text-gray-400 mb-16">
+              Seamless healthcare logistics.
+            </p>
+            
+            {/* Contact Form Section */}
+            <div className="mt-[80px]">
+              <h3 className="font-['ABC_Diatype_Semi_Mono'] text-[14px] uppercase mb-4 tracking-wider">
+                CONTACT OUR TEAM
+              </h3>
+              <form className="relative w-[615px]">
+                <input
+                  type="email"
+                  placeholder="Email"
+                  className="font-['Aeonik_Pro'] text-[28px] w-full px-0 py-3 border-b border-gray-300 focus:border-black outline-none transition-colors placeholder-gray-400"
+                />
+                <button
+                  type="submit"
+                  className="absolute right-0 top-1/2 -translate-y-1/2"
+                >
+                  <div className="bg-[#F7F7F7] p-3">
+                    <svg 
+                      width="24" height="24" viewBox="0 0 24 24" fill="none"
+                      className="transition-opacity"
+                    >
+                      <path d="M9 6L15 12L9 18" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div className="w-[615px]"></div>
+        </div>
       </main>
 
       <footer className="bg-[#F7F7F7] w-full">
