@@ -6,14 +6,14 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <header className="w-full">
-        <div className="container mx-auto px-1 py-10 flex justify-between items-center">
-          <div className="ml-[-60px]">
+        <div className="container max-w-[1400px] mx-auto px-6 py-8 flex justify-between items-center">
+          <div className="ml-[calc(-14.25vw)]">
             <Image
               src="/images/Group 2147222271.png"
               alt="Odyssey Logo"
               width={200}
               height={200}
-              className="w-[120px] h-auto"
+              className="w-[clamp(100px,8vw,120px)] h-auto"
               priority
             />
           </div>
@@ -21,8 +21,8 @@ export default function Home() {
       </header>
 
       <main className="flex-1">
-        <div className="container mx-auto px-1 flex justify-between items-center h-full">
-          <div className="ml-[-60px] flex flex-col mt-[120px]">
+        <div className="container max-w-[1400px] mx-auto px-1 flex justify-between items-center h-full">
+          <div className="ml-[calc(-13.5vw)] flex flex-col mt-[120px]">
             {/* Main Heading */}
             <h1 className="font-['Aeonik_Pro'] text-[72px] font-medium mb-4 leading-tight">
               Transport Any<br />
@@ -61,13 +61,13 @@ export default function Home() {
               </form>
             </div>
           </div>
-          <div className="absolute top-0 right-0 w-[1920px] h-screen overflow-hidden pointer-events-none">
-            <div className="absolute right-[0%] top-1/2 -translate-y-1/2 w-[60%]">
+          <div className="absolute top-0 right-0 w-full h-screen overflow-hidden pointer-events-none">
+            <div className="absolute right-[0%] top-1/2 -translate-y-1/2" style={{ width: 'min(80%, 1200px)' }}>
               <Image
                 src="/images/globe.png"
                 alt="Globe Visualization"
-                width={1500}
-                height={1500}
+                width={2000}
+                height={2000}
                 className="w-full h-auto"
                 priority
               />
@@ -77,24 +77,26 @@ export default function Home() {
       </main>
 
       <footer className="bg-[#F7F7F7] w-full relative z-10">
-        <div className="container mx-auto px-1 py-4 flex justify-between items-center">
-          <span className="text-sm text-gray-500 ml-[-60px]">
-            © 2025 Ship Odyssey, Inc.
-          </span>
-          <a 
-            href="https://linkedin.com/company/ship-odyssey" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="opacity-70 hover:opacity-100 transition-opacity mr-[-60px]"
-          >
-            <Image
-              src="/images/linkedin_icon.png"
-              alt="LinkedIn"
-              width={32}
-              height={32}
-              className="h-auto"
-            />
-          </a>
+        <div className="container max-w-[1400px] mx-auto px-1 py-4 flex justify-between items-center">
+          <div className="w-full max-w-[1400px] mx-auto flex justify-between items-center">
+            <span className="text-sm text-gray-500 ml-[calc(-13.5vw)]">
+              © 2025 Ship Odyssey, Inc.
+            </span>
+            <a 
+              href="https://linkedin.com/company/ship-odyssey" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="opacity-70 hover:opacity-100 transition-opacity mr-[calc(-13.5vw)]"
+            >
+              <Image
+                src="/images/linkedin_icon.png"
+                alt="LinkedIn"
+                width={48}
+                height={48}
+                className="h-auto"
+              />
+            </a>
+          </div>
         </div>
       </footer>
     </div>
