@@ -61,27 +61,27 @@ export default function Home() {
         <div className="max-w-[1400px] w-full mx-auto flex flex-col md:flex-row px-[5%]">
           {/* LEFT CONTENT
               Positioning Controls:
-              - Horizontal: Adjust -ml-[40vw] or pl-[5vw]
-              - Vertical: Adjust mt-[5vh] */}
-          <div className="w-full md:w-1/2 mb-12 md:mb-0">
-            <div className="-ml-[5vw] md:-ml-[18vw] mt-[5vh] md:mt[10vh]">
+              - Desktop content area: md:w-[60%]
+              - Desktop offset: md:-ml-[8vw] */}
+          <div className="w-full md:w-[60%] mb-12 md:mb-0">
+            <div className="md:-ml-[8vw] md:mt-[10vh] md:max-w-[85%]">
               {/* Main Heading - Adjust text-[min(64px,8vw)] for size */}
-              <h1 className="font-['Aeonik_Pro'] text-[min(64px,8vw)] md:text-[min(64px,5vw)] font-medium mb-4 leading-tight">
+              <h1 className="font-['Aeonik_Pro'] text-[min(64px,7vw)] md:text-[min(64px,4.5vw)] font-medium mb-4 leading-tight">
                 Transport Any<br />
                 Biologic, Anywhere.
               </h1>
 
               {/* Subheading - Adjust text-[min(40px,5vw)] for size */}
-              <p className="font-['Aeonik_Pro'] text-[min(40px,5vw)] md:text-[min(40px,3vw)] text-gray-400 mb-8 md:mb-16">
+              <p className="font-['Aeonik_Pro'] text-[min(40px,4vw)] md:text-[min(40px,2.5vw)] text-gray-400 mb-8 md:mb-16">
                 Seamless healthcare logistics.
               </p>
               
               {/* Contact Form Section */}
-              <div className="mt-8 md:mt-[10vh]">
-                <h3 className="font-['ABC_Diatype_Semi_Mono'] text-[min(15px,1.5vw)] md:text-[min(15px,1.2vw)] uppercase mb-4 tracking-wider">
+              <div className="mt-8 md:mt-[8vh]">
+                <h3 className="font-['ABC_Diatype_Semi_Mono'] text-[min(15px,1.5vw)] md:text-[min(15px,1vw)] uppercase mb-4 tracking-wider">
                   CONTACT OUR TEAM
                 </h3>
-                <form onSubmit={handleSubmit} className="relative max-w-[90%]">
+                <form onSubmit={handleSubmit} className="relative max-w-[90%] md:max-w-[80%]">
                   <input
                     type="email"
                     value={email}
@@ -113,10 +113,10 @@ export default function Home() {
 
           {/* GLOBE SECTION
               Positioning Controls:
-              - Horizontal: Adjust md:right-[-20%]
-              - Size: Adjust w-[150%] and md:w-[180%] */}
-          <div className="w-full md:w-1/2 relative">
-            <div className="absolute right-0 md:right-[-80%] top-[50%] -translate-y-1/2 w-[150%] md:w-[180%]">
+              - Container width: Adjust md:w-[40%] for globe area
+              - Position: Adjust right-[-15%] md:right-[-35%] for overlap */}
+          <div className="w-full md:w-[40%] relative">
+            <div className="absolute right-[-15%] md:right-[-35%] top-[50%] -translate-y-1/2 w-[150%] md:w-[160%]">
               <Image
                 src="/images/globe.png"
                 alt="Global Coverage"
@@ -132,14 +132,14 @@ export default function Home() {
 
       {/* FOOTER SECTION
           Positioning Controls:
-          - Text: Adjust -ml-80
-          - Icon: Adjust -mr-80 */}
+          - Desktop text offset: md:-ml-[10vw]
+          - Desktop icon offset: md:-mr-[10vw] */}
       <footer className="bg-[#F7F7F7] mt-auto">
-        <div className="flex justify-between items-center max-w-[1400px] mx-auto py-6 md:py-8 px-[2%]">
-          <span className="text-[min(16px,1.2vw)] md:text-[min(16px,1vw)] text-[#666666] -ml-80">
+        <div className="flex justify-between items-center max-w-[1400px] mx-auto py-6 md:py-8 px-[5%]">
+          <span className="text-[min(16px,1.2vw)] md:text-[min(16px,1vw)] text-[#666666] md:-ml-[10vw]">
             © 2025 Ship Odyssey, Inc.
           </span>
-          <a href="https://linkedin.com/company/ship-odyssey" target="_blank" rel="noopener noreferrer" className="-mr-80">
+          <a href="https://linkedin.com/company/ship-odyssey" target="_blank" rel="noopener noreferrer" className="md:-mr-[10vw]">
             <Image
               src="/images/linkedin_icon.png"
               alt="LinkedIn"
