@@ -7,8 +7,8 @@ export default function Home() {
     <div className="min-h-screen flex flex-col bg-white overflow-hidden">
       <div className="container mx-auto px-6 sm:px-8 lg:px-12 flex flex-col flex-grow relative">
         <header className="w-full py-4 sm:py-6 lg:py-8">
-          <div className="flex justify-between items-center">
-            <div className="relative w-20 sm:w-24 lg:w-28">
+          <div className="flex justify-between items-center max-w-[100vw] mx-auto">
+            <div className="relative w-20 sm:w-24 lg:w-28 -ml-12 sm:-ml-20 lg:-ml-28">
               <Image
                 src="/images/Group 2147222271.png"
                 alt="Odyssey Logo"
@@ -22,8 +22,8 @@ export default function Home() {
         </header>
 
         <main className="flex-grow flex items-center relative py-[clamp(2rem,8vh,4rem)]">
-          <div className="w-full max-w-[85vw] lg:max-w-[80vw] xl:max-w-[75vw] mx-auto">
-            <div className="relative z-10 -mt-[clamp(2rem,5vh,4rem)]">
+          <div className="w-full max-w-[95vw] lg:max-w-[92vw] xl:max-w-[90vw] mx-auto">
+            <div className="relative z-10 -mt-[clamp(2rem,5vh,4rem)] -ml-12 sm:-ml-20 lg:-ml-28">
               {/* Main Heading */}
               <h1 className="font-['Aeonik_Pro'] text-[clamp(2.5rem,5vw,5rem)] font-medium mb-3 leading-[1.1] tracking-tight">
                 Transport Any<br />
@@ -84,15 +84,15 @@ export default function Home() {
 
       <footer className="bg-[#F7F7F7] w-full mt-auto relative z-20">
         <div className="container mx-auto px-6 sm:px-8 lg:px-12 py-4">
-          <div className="flex justify-between items-center max-w-[85vw] mx-auto">
-            <span className="text-sm text-gray-500">
+          <div className="flex justify-between items-center max-w-[100vw] mx-auto">
+            <span className="text-sm text-gray-500 -ml-12 sm:-ml-20 lg:-ml-28">
               © 2025 Ship Odyssey, Inc.
             </span>
             <a 
               href="https://linkedin.com/company/ship-odyssey" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="opacity-70 hover:opacity-100 transition-opacity"
+              className="opacity-70 hover:opacity-100 transition-opacity -mr-12 sm:-mr-20 lg:-mr-32"
             >
               <Image
                 src="/images/linkedin_icon.png"
