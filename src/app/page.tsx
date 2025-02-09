@@ -17,7 +17,6 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="w-[120px]"></div> {/* Spacer to match footer structure */}
         </div>
       </header>
 
@@ -62,11 +61,22 @@ export default function Home() {
               </form>
             </div>
           </div>
-          <div className="w-[615px]"></div>
+          <div className="absolute top-0 right-0 w-[1920px] h-screen overflow-hidden pointer-events-none">
+            <div className="absolute right-[0%] top-1/2 -translate-y-1/2 w-[60%]">
+              <Image
+                src="/images/globe.png"
+                alt="Globe Visualization"
+                width={1500}
+                height={1500}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+          </div>
         </div>
       </main>
 
-      <footer className="bg-[#F7F7F7] w-full">
+      <footer className="bg-[#F7F7F7] w-full relative z-10">
         <div className="container mx-auto px-1 py-4 flex justify-between items-center">
           <span className="text-sm text-gray-500 ml-[-60px]">
             © 2025 Ship Odyssey, Inc.
