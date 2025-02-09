@@ -22,15 +22,15 @@ export default function Home() {
 
       <main className="flex-1">
         <div className="container max-w-[1400px] mx-auto px-6 flex justify-between items-center h-full">
-          <div className="ml-[min(calc(-14.25vw),-200px)] flex flex-col mt-[clamp(200px,20vh,260px)]">
+          <div className="ml-[min(calc(-14.25vw),-200px)] flex flex-col mt-[clamp(200px,20vh,260px)] max-w-[800px]">
             {/* Main Heading */}
-            <h1 className="font-['Aeonik_Pro'] text-[clamp(56px,4.5vw,72px)] font-medium mb-4 leading-tight">
+            <h1 className="font-['Aeonik_Pro'] text-[clamp(56px,4.5vw,68px)] font-medium mb-4 leading-tight">
               Transport Any<br />
               Biologic, Anywhere.
             </h1>
 
             {/* Subheading */}
-            <p className="font-['Aeonik_Pro'] text-[clamp(32px,2.8vw,44px)] text-gray-400 mb-[clamp(48px,6vh,64px)]">
+            <p className="font-['Aeonik_Pro'] text-[clamp(32px,2.8vw,40px)] text-gray-400 mb-[clamp(48px,6vh,64px)]">
               Seamless healthcare logistics.
             </p>
             
