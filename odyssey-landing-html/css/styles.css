@@ -243,7 +243,7 @@ footer {
 
 @media (min-width: 1400px) {
     .globe {
-        width: clamp(800px, 45vw, 1400px);
+        width: clamp(800px, 40vw, 1400px);
     }
 }
 
