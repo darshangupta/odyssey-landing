@@ -137,11 +137,12 @@ button[type="submit"] {
 
 .globe {
     position: absolute;
-    bottom: clamp(-6.5rem, -8vh, -3rem);
-    right: 0%;
+    bottom: 0;
+    right: 0;
     width: var(--globe-size);
     z-index: 1;
     pointer-events: none;
+    transform: translate(0%, 8.5%);
 }
 
 .globe img {
@@ -151,32 +152,43 @@ button[type="submit"] {
 
 footer {
     background: #F7F7F7;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
     position: relative;
     z-index: 2;
+    width: 100%;
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
 }
 
 .footer-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    justify-content: space-between;
+    width: 100%;
     max-width: var(--content-width);
     margin: 0 auto;
-    padding: 0 clamp(1rem, 3vw, 2rem);
+    padding: 0 var(--padding-edge);
+    position: relative;
 }
 
 .copyright {
     font-size: clamp(0.9rem, 1.1vw, 1.1rem);
     color: #666;
-    margin-left: clamp(-8rem, -10vw, -2rem);
+    grid-column: 1;
+    margin-left: clamp(-8rem, -6vw, 4rem);
 }
 
 .linkedin {
-    margin-right: clamp(-8rem, -10vw, -2rem);
+    display: flex;
+    align-items: center;
+    grid-column: 3;
+    justify-self: end;
+    margin-right: clamp(-8rem, -6vw, 4rem);
 }
 
 .linkedin img {
-    width: 3rem;
+    width: clamp(2rem, 3vw, 3rem);
     height: auto;
     opacity: 0.7;
     transition: opacity 0.3s;
@@ -187,21 +199,29 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .globe {
-        opacity: 0.5;
-        right: 50%;
-        transform: translateX(50%);
-        width: clamp(400px, 85vw, 600px);
-    }
-
-    .content {
-        margin-top: clamp(-2rem, -3vh, -1rem);
+    footer {
+        min-height: auto;
+        padding: 1.5rem 0;
     }
 
     .footer-content {
+        display: flex;
         flex-direction: column;
         gap: 1rem;
         align-items: center;
+        padding: 0 var(--padding-edge);
+    }
+
+    .copyright, .linkedin {
+        margin: 0;
+        padding: 0;
+    }
+
+    .globe {
+        opacity: 0.5;
+        right: 50%;
+        transform: translate(50%, 25%);
+        width: clamp(400px, 85vw, 600px);
     }
 }
 
@@ -209,6 +229,7 @@ footer {
     .globe {
         opacity: 0.3;
         width: clamp(300px, 90vw, 500px);
+        transform: translate(45%, 25%);
     }
 
     h1 {
