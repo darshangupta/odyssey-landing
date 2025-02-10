@@ -50,7 +50,7 @@ header {
 }
 
 .logo img {
-    width: clamp(5rem, 7vw, 7rem);
+    width: clamp(6.5rem, 8.5vw, 8.5rem);
     height: auto;
 }
 
@@ -72,7 +72,7 @@ main {
 }
 
 h1 {
-    font-size: clamp(2.5rem, 4.75vw, 4.75rem);
+    font-size: clamp(2.2rem, 4.25vw, 4.25rem);
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: -0.02em;
@@ -81,7 +81,7 @@ h1 {
 }
 
 .subheading {
-    font-size: clamp(1.6rem, 2.8vw, 2.8rem);
+    font-size: clamp(1.4rem, 2.5vw, 2.5rem);
     color: #666;
     margin-bottom: clamp(3rem, 8vh, 6rem);
 }
@@ -89,7 +89,7 @@ h1 {
 /* Contact Form */
 .contact-form h3 {
     font-family: 'ABC Diatype Semi Mono', monospace;
-    font-size: clamp(0.8rem, 1.35vw, 1.35rem);
+    font-size: clamp(0.7rem, 1.25vw, 1.25rem);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 1rem;
@@ -103,7 +103,7 @@ h1 {
 input[type="email"] {
     width: 100%;
     font-family: 'Aeonik Pro', sans-serif;
-    font-size: clamp(1.2rem, 2.3vw, 2.3rem);
+    font-size: clamp(1.1rem, 2.1vw, 2.1rem);
     padding: 0.75rem 3rem 0.75rem 0;
     border: none;
     border-bottom: 1px solid #ddd;
@@ -157,10 +157,10 @@ button[type="submit"] {
 /* Globe */
 .globe {
     position: absolute;
-    top: 55%;
+    top: 45.5%;
     right: clamp(-25%, -15vw, -5%);
     transform: translateY(-51%);
-    width: clamp(350px, 95vw, 1050px);
+    width: clamp(320px, 90vw, 950px);
     z-index: 1;
     pointer-events: none;
 }
@@ -187,16 +187,17 @@ footer {
     max-width: var(--content-width);
     margin: 0 auto;
     position: relative;
+    padding: 0 var(--padding-edge);
 }
 
 .copyright {
     font-size: clamp(0.95rem, 1.1vw, 1.1rem);
     color: #666;
-    margin-left: var(--padding-edge);
+    margin-left: 0;
 }
 
 .linkedin {
-    margin-right: var(--padding-edge);
+    margin-right: 0;
     display: flex;
     align-items: center;
 }
