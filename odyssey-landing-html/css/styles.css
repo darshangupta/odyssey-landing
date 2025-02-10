@@ -157,10 +157,10 @@ button[type="submit"] {
 /* Globe */
 .globe {
     position: absolute;
-    top: 45.5%;
+    top: 51%;
     right: clamp(-25%, -15vw, -5%);
     transform: translateY(-51%);
-    width: clamp(320px, 90vw, 950px);
+    width: clamp(280px, 80vw, 850px);
     z-index: 1;
     pointer-events: none;
 }
