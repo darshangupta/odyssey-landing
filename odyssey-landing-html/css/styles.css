@@ -176,7 +176,7 @@ footer {
     font-size: clamp(0.9rem, 1.1vw, 1.1rem);
     color: #666;
     grid-column: 1;
-    margin-left: clamp(-8rem, -6vw, 4rem);
+    margin-left: clamp(2rem, 2vw, 4rem);
 }
 
 .linkedin {
@@ -184,7 +184,7 @@ footer {
     align-items: center;
     grid-column: 3;
     justify-self: end;
-    margin-right: clamp(-8rem, -6vw, 4rem);
+    margin-right: clamp(2rem, 2vw, 4rem);
 }
 
 .linkedin img {
@@ -228,7 +228,7 @@ footer {
 @media (max-width: 480px) {
     .globe {
         opacity: 0.3;
-        width: clamp(300px, 90vw, 500px);
+        width: clamp(300px, 80vw, 500px);
         transform: translate(45%, 25%);
     }
 
@@ -243,7 +243,7 @@ footer {
 
 @media (min-width: 1400px) {
     .globe {
-        width: clamp(800px, 55vw, 1400px);
+        width: clamp(800px, 45vw, 1400px);
     }
 }
 
