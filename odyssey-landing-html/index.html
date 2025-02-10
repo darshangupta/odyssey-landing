@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odyssey - Transport Any Biologic, Anywhere</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="images/Group 2147222271.png" alt="Odyssey Logo">
+            </div>
+        </header>
+
+        <main>
+            <div class="content">
+                <h1>
+                    Transport Any<br>
+                    Biologic, Anywhere.
+                </h1>
+                <p class="subheading">Seamless healthcare logistics.</p>
+                
+                <div class="contact-form">
+                    <h3>CONTACT OUR TEAM</h3>
+                    <form id="emailForm" novalidate>
+                        <div class="input-group">
+                            <input type="email" placeholder="Email" required>
+                            <button type="submit">
+                                <div class="arrow-container">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 6L15 12L9 18" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="feedback-message"></div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="globe">
+                <img src="images/globe.png" alt="Globe Visualization">
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <span class="copyright">© 2025 Ship Odyssey, Inc.</span>
+                <a href="https://linkedin.com/company/ship-odyssey" target="_blank" rel="noopener noreferrer" class="linkedin">
+                    <img src="images/linkedin_icon.png" alt="LinkedIn">
+                </a>
+            </div>
+        </footer>
+    </div>
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const emailInput = this.querySelector('input[type="email"]');
+            const feedbackMessage = this.querySelector('.feedback-message');
+            const email = emailInput.value.trim();
+            
+            // Simple email validation regex
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+            
+            if (emailRegex.test(email)) {
+                feedbackMessage.textContent = 'We will be in touch shortly';
+                feedbackMessage.className = 'feedback-message success';
+                emailInput.value = ''; // Clear the input
+            } else {
+                feedbackMessage.textContent = 'Please input a valid email';
+                feedbackMessage.className = 'feedback-message error';
+            }
+        });
+    </script>
+</body>
+</html>
