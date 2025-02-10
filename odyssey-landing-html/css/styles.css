@@ -176,7 +176,7 @@ footer {
     font-size: clamp(0.9rem, 1.1vw, 1.1rem);
     color: #666;
     grid-column: 1;
-    margin-left: clamp(2rem, 2vw, 4rem);
+    margin-left: clamp(-2rem, -2vw, 4rem);
 }
 
 .linkedin {
@@ -184,7 +184,7 @@ footer {
     align-items: center;
     grid-column: 3;
     justify-self: end;
-    margin-right: clamp(2rem, 2vw, 4rem);
+    margin-right: clamp(-2rem, -2vw, 4rem);
 }
 
 .linkedin img {
