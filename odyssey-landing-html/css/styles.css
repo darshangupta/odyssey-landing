@@ -1,17 +1,19 @@
 @font-face {
     font-family: 'Aeonik Pro';
-    src: url('../fonts/AeonikProTRIAL-Regular.otf') format('opentype');
+    src: local('Aeonik Pro'),
+         url('../fonts/AeonikProTRIAL-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 @font-face {
     font-family: 'ABC Diatype Semi Mono';
-    src: url('../fonts/ABCDiatypeSemi-Mono-Regular.otf') format('opentype');
+    src: local('ABC Diatype Semi Mono'),
+         url('../fonts/ABCDiatypeSemi-Mono-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 :root {
@@ -70,7 +72,7 @@ main {
 }
 
 h1 {
-    font-size: clamp(2.25rem, 4.35vw, 4.35rem);
+    font-size: clamp(2.5rem, 4.75vw, 4.75rem);
     font-weight: 500;
     line-height: 1.1;
     letter-spacing: -0.02em;
@@ -79,7 +81,7 @@ h1 {
 }
 
 .subheading {
-    font-size: clamp(1.47rem, 2.58vw, 2.58rem);
+    font-size: clamp(1.6rem, 2.8vw, 2.8rem);
     color: #666;
     margin-bottom: clamp(3rem, 8vh, 6rem);
 }
@@ -87,7 +89,7 @@ h1 {
 /* Contact Form */
 .contact-form h3 {
     font-family: 'ABC Diatype Semi Mono', monospace;
-    font-size: clamp(0.73rem, 1.26vw, 1.26rem);
+    font-size: clamp(0.8rem, 1.35vw, 1.35rem);
     text-transform: uppercase;
     letter-spacing: 0.05em;
     margin-bottom: 1rem;
@@ -101,7 +103,7 @@ h1 {
 input[type="email"] {
     width: 100%;
     font-family: 'Aeonik Pro', sans-serif;
-    font-size: clamp(1.08rem, 2.13vw, 2.13rem);
+    font-size: clamp(1.2rem, 2.3vw, 2.3rem);
     padding: 0.75rem 3rem 0.75rem 0;
     border: none;
     border-bottom: 1px solid #ddd;
@@ -155,10 +157,10 @@ button[type="submit"] {
 /* Globe */
 .globe {
     position: absolute;
-    top: 50%;
-    right: clamp(-15%, -8vw, 0%);
+    top: 55%;
+    right: clamp(-25%, -15vw, -5%);
     transform: translateY(-51%);
-    width: clamp(280px, 85vw, 900px);
+    width: clamp(350px, 95vw, 1050px);
     z-index: 1;
     pointer-events: none;
 }
@@ -188,19 +190,19 @@ footer {
 }
 
 .copyright {
-    font-size: 0.875rem;
+    font-size: clamp(0.95rem, 1.1vw, 1.1rem);
     color: #666;
-    margin-left: calc(var(--icon-margin) * -1);
+    margin-left: var(--padding-edge);
 }
 
 .linkedin {
-    margin-right: calc(var(--icon-margin) * -1);
+    margin-right: var(--padding-edge);
     display: flex;
     align-items: center;
 }
 
 .linkedin img {
-    width: clamp(1.75rem, 2.5vw, 2.5rem);
+    width: clamp(2rem, 3vw, 3rem);
     height: auto;
     opacity: 0.7;
     transition: opacity 0.3s;
