@@ -18,8 +18,11 @@
 
 :root {
     --padding-edge: clamp(1rem, 5vw, 4rem);
-    --content-width: min(95vw, 1400px);
+    --content-width: min(92vw, 1400px);
     --icon-margin: clamp(2rem, 5.5vw, 8rem);
+    --footer-spacing: 2rem;  /* Control space between footer elements */
+    --globe-min-size: 500px;  /* Minimum globe size */
+    --globe-max-size: 850px;  /* Maximum globe size */
 }
 
 * {
@@ -49,6 +52,10 @@ header {
     padding: clamp(1rem, 3vh, 2rem) var(--padding-edge);
 }
 
+.logo {
+    margin-left: 0;
+}
+
 .logo img {
     width: clamp(6.5rem, 8.5vw, 8.5rem);
     height: auto;
@@ -69,6 +76,7 @@ main {
     z-index: 2;
     max-width: min(90%, 800px);
     margin-top: clamp(-3rem, -5vh, -1.5rem);
+    margin-left: 0;
 }
 
 h1 {
@@ -160,7 +168,7 @@ button[type="submit"] {
     top: 51%;
     right: clamp(-25%, -15vw, -5%);
     transform: translateY(-51%);
-    width: clamp(280px, 80vw, 850px);
+    width: clamp(var(--globe-min-size), 65vw, var(--globe-max-size));
     z-index: 1;
     pointer-events: none;
 }
@@ -187,17 +195,18 @@ footer {
     max-width: var(--content-width);
     margin: 0 auto;
     position: relative;
-    padding: 0 var(--padding-edge);
+    gap: var(--footer-spacing);
+    padding: 0;
 }
 
 .copyright {
     font-size: clamp(0.95rem, 1.1vw, 1.1rem);
     color: #666;
-    margin-left: 0;
+    margin-left: var(--footer-left-spacing, 0);
 }
 
 .linkedin {
-    margin-right: 0;
+    margin-right: var(--footer-right-spacing, 0);
     display: flex;
     align-items: center;
 }
@@ -215,11 +224,16 @@ footer {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+    :root {
+        --globe-min-size: 400px;
+        --footer-spacing: 1rem;
+    }
+    
     .globe {
         opacity: 0.5;
         right: 50%;
         transform: translate(50%, -51%);
-        width: clamp(200px, 70vw, 400px);
+        width: clamp(var(--globe-min-size), 65vw, var(--globe-max-size));
     }
 
     h1 {
@@ -241,9 +255,14 @@ footer {
 }
 
 @media (max-width: 480px) {
+    :root {
+        --globe-min-size: 300px;
+        --footer-spacing: 0.75rem;
+    }
+    
     .globe {
-        width: 90vw;
         opacity: 0.3;
+        width: clamp(var(--globe-min-size), 65vw, var(--globe-max-size));
     }
 
     .content {
