@@ -1,0 +1,28 @@
+service: odyssey-contact-form
+
+frameworkVersion: '4'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - ses:SendEmail
+            - ses:SendRawEmail
+          Resource: "*"
+
+functions:
+  sendEmail:
+    handler: handler.sendEmail
+    events:
+      - http:
+          path: contact
+          method: post
+          cors: true # This will automatically add all necessary CORS headers
+
+plugins:
+  - serverless-offline 

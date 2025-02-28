@@ -57,7 +57,7 @@
         </footer>
     </div>
     <script>
-        document.getElementById('emailForm').addEventListener('submit', function(e) {
+        document.getElementById('emailForm').addEventListener('submit', async function(e) {
             e.preventDefault();
             
             const emailInput = this.querySelector('input[type="email"]');
@@ -68,9 +68,32 @@
             const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
             
             if (emailRegex.test(email)) {
-                feedbackMessage.textContent = 'We will be in touch shortly.';
-                feedbackMessage.className = 'feedback-message success';
-                emailInput.value = ''; // Clear the input
+                try {
+                    // Show loading state
+                    feedbackMessage.textContent = 'Sending...';
+                    feedbackMessage.className = 'feedback-message';
+                    
+                    // Using our deployed API endpoint
+                    const response = await fetch('https://fq0nq7dmua.execute-api.us-east-1.amazonaws.com/dev/contact', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ email })
+                    });
+
+                    if (response.ok) {
+                        feedbackMessage.textContent = 'We will be in touch shortly.';
+                        feedbackMessage.className = 'feedback-message success';
+                        emailInput.value = ''; // Clear the input
+                    } else {
+                        throw new Error('Failed to send email');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                    feedbackMessage.textContent = 'There was an error. Please try again later.';
+                    feedbackMessage.className = 'feedback-message error';
+                }
             } else {
                 feedbackMessage.textContent = 'Please input a valid email.';
                 feedbackMessage.className = 'feedback-message error';
